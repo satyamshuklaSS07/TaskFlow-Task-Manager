@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TaskFlow — 8D To-Do List</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="aurora aurora-one"></div>
+<div class="aurora aurora-two"></div>
+<div class="grid-bg"></div>
+
+<main class="wrap">
+  <section class="app">
+    <div class="top-glow"></div>
+
+    <header class="hero">
+      <div class="brand">
+        <div class="logo"><span>✓</span></div>
+        <div>
+          <div class="mini">PRODUCTIVITY • DAY 16</div>
+          <h1>Task<span>Flow</span></h1>
+        </div>
+      </div>
+      <div class="date-pill" id="today">Today</div>
+    </header>
+
+    <div class="hero-copy">
+      <h2>Turn plans into <em>progress.</em></h2>
+      <p>A polished, focused workspace for the tasks that matter.</p>
+    </div>
+
+    <section class="stats">
+      <div class="stat-card blue"><div class="stat-icon">◈</div><div><b id="totalCount">0</b><span>Total Tasks</span></div></div>
+      <div class="stat-card purple"><div class="stat-icon">◌</div><div><b id="activeCount">0</b><span>In Progress</span></div></div>
+      <div class="stat-card green"><div class="stat-icon">✓</div><div><b id="doneCount">0</b><span>Completed</span></div></div>
+    </section>
+
+    <form id="taskForm" class="add-box">
+      <div class="input-wrap">
+        <span>✦</span>
+        <input id="taskInput" maxlength="100" autocomplete="off" placeholder="What do you want to accomplish?" aria-label="New task">
+      </div>
+      <button type="submit" class="add-btn"><span>＋</span> Add Task</button>
+    </form>
+
+    <div class="toolbar">
+      <div class="filters">
+        <button type="button" class="filter active" data-filter="all">All <small id="allBadge">0</small></button>
+        <button type="button" class="filter" data-filter="active">Active <small id="activeBadge">0</small></button>
+        <button type="button" class="filter" data-filter="completed">Done <small id="doneBadge">0</small></button>
+      </div>
+      <button type="button" id="clearCompleted" class="clear">Clear completed</button>
+    </div>
+
+    <ul id="taskList" class="task-list"></ul>
+
+    <div id="emptyState" class="empty">
+      <div class="empty-orb"><span>✓</span></div>
+      <h3 id="emptyTitle">Your workspace is clear</h3>
+      <p id="emptyText">Add a task above and start making progress.</p>
+    </div>
+
+    <footer>
+      <span><i></i> In-memory mode</span>
+      <strong id="remainingText">0 tasks remaining</strong>
+    </footer>
+  </section>
+  <p class="credit">TASKFLOW <span>•</span> VANILLA HTML • CSS • JAVASCRIPT</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
